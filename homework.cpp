@@ -12,21 +12,29 @@
 #include <vector>    // std::vector
    
    //prob 1
-    int isPrime(int n)
+   int isPrime(int n)
     {
-        if(n > 1 && n % n == 0)
+        int factor = 2;
+
+        // the number 1 is not prime
+        if (n == 1)
         {
-            
-            
+            return false;
+        }
+        else
+        {
+            while (factor < n)
+            {
+                if (/* n is divisible by the factor */)
+                {
+                    return false;
+                }
+                factor = factor + 1;
+            }
+
             return true;
         }
         
-        {
-            if(n < 1 && n % n != 0)
-            {
-                
-            }
-        }
     }
 
 int main()
@@ -39,7 +47,7 @@ int main()
     int x; 
     std::cin >> x;
     
-    std::cout << isPrime(x) << std::endl;
+    std::cout << isPrime(x);
 
  
 
