@@ -25,7 +25,7 @@
         {
             while (factor < n)
             {
-                if (/* n is divisible by the factor */)
+                if (n == n /* n is divisible by the factor */)
                 {
                     return false;
                 }
